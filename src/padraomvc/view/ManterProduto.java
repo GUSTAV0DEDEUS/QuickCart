@@ -28,7 +28,7 @@ public class ManterProduto implements ViewBasico {
         System.out.println(vendedorEntrada);
         switch (num) {
             case 1 ->
-                alterar();
+                inserir();
             case 2 ->
                 alterar();
             case 3 ->
@@ -49,7 +49,7 @@ public class ManterProduto implements ViewBasico {
         String tipoP = JOptionPane.showInputDialog("TIPO DO PRODUTO");
         Produto produto = new Produto(vendedorEntrada.getId(), nomeP, valor, tipoP);
         ControllerVendedor contPro = new ControllerVendedor();
-        Produto proSaida = (Produto) contPro.alterar(produto);
+        Produto proSaida = (Produto) contPro.inserir(produto);
         JOptionPane.showMessageDialog(null, proSaida.toString());
     }
 
