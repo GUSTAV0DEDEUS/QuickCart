@@ -96,7 +96,7 @@ public class Compra implements Serializable{
       
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", idU=" + idU + ", idV=" + idV + ", Nome produto=" + nomeP + ", Valor=" + valorP + "," + "Metodo de Pagamento" + metodoPagamento + '}';
+        return "Nome produto= " + nomeP + ", Valor= " + valorP + "," + "Metodo de Pagamento= " + metodoPagamento;
     }
     
 }

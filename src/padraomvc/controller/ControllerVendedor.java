@@ -6,6 +6,7 @@ package padraomvc.controller;
 
 import java.sql.SQLException;
 import java.util.List;
+import padraomvc.model.bean.Usuario;
 import padraomvc.model.dao.DAOVendedor;
 import padraomvc.util.ControllerBasico;
 
@@ -42,7 +43,7 @@ public class ControllerVendedor implements ControllerBasico{
     }
     
         
-    public Object listarVendas(Object obj) throws SQLException, ClassNotFoundException {
+    public List<Object> listarVendas(Usuario obj) throws SQLException, ClassNotFoundException {
         dao = new DAOVendedor();
         return dao.listarVendas(obj);
     }
