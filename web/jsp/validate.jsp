@@ -22,6 +22,8 @@
         String role = request.getParameter("role");
         Usuario newUser = new Usuario(username, password, "ativo", role);
         userOut = (Usuario) userCont.inserir(newUser);
+        response.sendRedirect("signin.jsp");
+
     } else if ("signin".equals(action)) {
         Usuario userIn = new Usuario(username, password);
         userOut = (Usuario) userCont.persist(userIn);
@@ -41,7 +43,7 @@
     </head>
     <body>
     <body class="bg-gray-100 flex justify-center items-center h-screen">
-        <%if (userOut != null) { %>
+        <%if (userOut != null & "signin".equals(action)) { %>
         <% if ("vendedor".equals(userOut.getTipo())) {
                 response.sendRedirect("vendedor/dashboard.jsp");
             } else {
